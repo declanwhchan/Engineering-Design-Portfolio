@@ -1,0 +1,150 @@
+:root {
+    --bg: #0a0a0a;
+    --card-bg: #161616;
+    --accent: #007AFF; /* Electric Blue */
+    --text-main: #ffffff;
+    --text-dim: #a0a0a0;
+    --mono-font: 'Fira Code', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--accent); }
+
+nav ul { display: flex; list-style: none; }
+
+nav ul li { margin-left: 2rem; }
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: var(--accent); }
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.mono {
+    font-family: var(--mono-font);
+    color: var(--accent);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+h1 span {
+    -webkit-text-stroke: 1px var(--text-main);
+    color: transparent;
+}
+
+.subtitle {
+    color: var(--text-dim);
+    font-size: 1.2rem;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+/* Projects */
+.project-grid { padding: 5rem 10%; }
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 1rem;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid #222;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.project-img {
+    height: 250px;
+    background-color: #333;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-info { padding: 1.5rem; }
+
+.project-info h3 { margin-bottom: 0.5rem; }
+
+.project-info p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    font-family: var(--mono-font);
+    font-size: 0.7rem;
+    background: #222;
+    padding: 4px 8px;
+    margin-right: 5px;
+    border-radius: 4px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 1px solid var(--accent);
+    color: var(--text-main);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+}
